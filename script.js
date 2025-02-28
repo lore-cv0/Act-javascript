@@ -2,7 +2,7 @@
 /*crea una variable llamada precio y asignale un valor decimal.
  luego crea una variable llamada cantidad y asignale un valor entero.
 muestra el tipo de dato de cada variable en la consola*/
-let precio = 0.5;
+/*let precio = 0.5;
 let cantidad = 125;
 console.log (typeof precio); // imprime en consola 
 document.write (typeof cantidad);// imprime en el navegador
@@ -85,7 +85,7 @@ console.log("Costo total del viaje: $" + costoTotal );
 //ejercicio 6
 //Realizara un programa en el cual se van a leer tres números y determinar el cuadrado de cada uno de ellos.
 // Números a calcular
-let num1 = 4;
+/*let num1 = 4;
 let num2 = 7;
 let num3 = 3;
 // Calcular cuadrados
@@ -233,10 +233,148 @@ persona++;
     5 x 9 = 45
     5 x 10 = 50*/
     
-    let numero = parseInt(prompt("Ingrese un número para ver su tabla de multiplicar:"));
+    /*let numero = parseInt(prompt("Ingrese un número para ver su tabla de multiplicar:"));
 
     for (let i = 1; i <= 10; i++) {
         let resultado = numero * i;
         document.write(numero + " x " + i + " = " + resultado + "<br>");
-    }
+    }*/
     
+        //imprime por consola un mensaje si el usuario y contraseña coincide con unos establecidos
+        /*let usuario = prompt("ingrese su usuario");
+        let contraseña = prompt("ingrese su contraseña");
+        let usuarioCorrecto = "usuario";
+        let contraseñaCorrecta = "contraseña";
+        if (usuario == usuarioCorrecto && contraseña == contraseñaCorrecta){
+            console.log("bienvenido al sistema");
+        } else {
+            console.log("usuario o contraseña incorrecta");
+        }*/
+
+           /* let finde =false ;
+            if(finde=false){
+                console.log("puedes salvar al mundo")
+            }
+            else{
+                console.log("sigue descansando, superheroe")
+            }*/
+//swith
+//ejemplo 1: ingresar un programa  que determine en que dia d la semana corresponde hoy,utilizando la funcion prompt
+
+/*const dia = new Date().getDay()
+
+switch (dia) {
+  case "lunes":
+    console.log("¡Hoy es lunes! 😢")
+        break
+    }
+    case 2:
+        console.log("¡Hoy es martes! 😢")
+        break
+        case 3:
+            console.log("¡Hoy es miercoles! 😢")
+            break
+            case 4:
+                console.log("¡Hoy es jueves! 😢")
+                break
+                case 5:
+                    console.log("¡Hoy es viernes! 😢")
+                    break
+                    case 6:
+                        console.log("¡Hoy es sabado! 😢")
+                        break
+                        case 0:
+                            console.log("¡Hoy es domingo! 😢")
+                            break
+  default:
+    console.log("No es lunes, YAY! 🚀")
+    break
+}*/
+/*con swith realizar: el usuario de nombre y edad con la siguiente verificacion
+1 a 18 es joven
+19 a 40 es adulto
+41 a 60 es maduro
+61 en adelante anciano*/
+/*let nombre = prompt ("ingrese su nombre");
+let edad = parseInt(prompt("ingrese su edad"));
+
+switch (true) {
+    case (edad <= 18):
+        alert("Hola " + nombre + ", eres una persona joven");
+        break;
+    case (edad <= 40):
+        alert("Hola " + nombre + ", eres una persona adulta");
+        break;
+    case (edad <= 60):
+        alert("Hola " + nombre + ", eres una persona madura");
+        break;
+    default:
+        alert("Hola " + nombre + ", eres una persona anciana");
+}*/
+
+
+//Ejercicios - Estructuras de control en JavaScript
+//EJERCICIO 2
+/* Dada las 3 calificaciones que el estudiante obtuvo en un curso
+a) Determinar su promedio
+b) Indicar si el estudiante aprobó o no aprobó el curso.
+Las notas deben ser de 1 a 10 y aprueba con un promedio mayor de 6*/
+/*let nota1 =parseInt(prompt("ingrese la primera nota"));
+let nota2 =parseInt(prompt("ingrese la segunda nota"));
+let nota3 =parseInt(prompt("ingrese la tercera nota"));
+let promedio = (nota1 +nota2 + nota3)/3;
+if (promedio >= 6){
+    console.log("el promedio del estudiante es: " + promedio + " y ha aprobado el curso");
+}else {
+    console.log("el promedio del estudiante es: " + promedio + " y no ha aprobado el curso");
+}*/
+
+//EJERCICIO 4
+//Leer dos números y los imprima en forma ascendente
+let num1 = parseInt(prompt("Ingrese un número"));
+let num2 = parseInt(prompt("Ingrese otro número"));
+
+let numeros = [num1, num2];
+numeros.sort((a, b) => a - b);
+console.log("Números en orden ascendente: ", numeros);
+
+//EJERCICIO 6
+/*Dado un número entre 1 y 7 escriba su correspondiente día de la semana
+así:
+DIA1 = LUNES
+DIA2 = MARTES
+DIA3 = MIERCOLES
+DIA4 = JUEVES
+DIA5 = VIERNES
+DIA6 = SABADO
+DIA7 = DOMINGO
+Si se escribe otro número diferente debe salir el mensaje: ESCRIBIÓ UN
+NÚMERO FUERA DEL RANGO. ESCRIBA UN NÚMERO ENTRE 1 Y 7*/
+
+const dia = parseInt(prompt("Ingrese un número entre 1 y 7:"));
+
+switch (dia) {
+    case 1:
+        console.log("DIA1 = LUNES");
+        break;
+    case 2:
+        console.log("DIA2 = MARTES");
+        break;
+    case 3:
+        console.log("DIA3 = MIERCOLES");
+        break;
+    case 4:
+        console.log("DIA4 = JUEVES");
+        break;
+    case 5:
+        console.log("DIA5 = VIERNES");
+        break;
+    case 6:
+        console.log("DIA6 = SABADO");
+        break;
+    case 7:
+        console.log("DIA7 = DOMINGO");
+        break;
+    default:
+        console.log("ESCRIBIÓ UN NÚMERO FUERA DEL RANGO. ESCRIBA UN NÚMERO ENTRE 1 Y 7");
+}
