@@ -331,7 +331,7 @@ if (promedio >= 6){
 
 //EJERCICIO 4
 //Leer dos números y los imprima en forma ascendente
-let num1 = parseInt(prompt("Ingrese un número"));
+/*let num1 = parseInt(prompt("Ingrese un número"));
 let num2 = parseInt(prompt("Ingrese otro número"));
 
 let numeros = [num1, num2];
@@ -351,7 +351,7 @@ DIA7 = DOMINGO
 Si se escribe otro número diferente debe salir el mensaje: ESCRIBIÓ UN
 NÚMERO FUERA DEL RANGO. ESCRIBA UN NÚMERO ENTRE 1 Y 7*/
 
-const dia = parseInt(prompt("Ingrese un número entre 1 y 7:"));
+/*const dia = parseInt(prompt("Ingrese un número entre 1 y 7:"));
 
 switch (dia) {
     case 1:
@@ -377,4 +377,140 @@ switch (dia) {
         break;
     default:
         console.log("ESCRIBIÓ UN NÚMERO FUERA DEL RANGO. ESCRIBA UN NÚMERO ENTRE 1 Y 7");
+}
+
+//EJERCICIO 8
+/*un obrero necesita calcular su salario semanal, el cual se obtiene de la sig.
+manera:
+a) Si trabaja 40 horas o menos se le paga $16000 por hora
+b) Si trabaja más de 40 horas se le paga $20000 por hora*/
+/*let horas = parseInt(prompt("Ingrese el número de horas trabajadas en la semana"));
+let salario;
+
+if (horas <= 40) {
+    salario = horas * 16000;
+} else {
+    salario = (40 * 16000) + ((horas - 40) * 20000);
+}
+
+console.log("El salario semanal del obrero es: $" + salario);*/
+
+//EJERCICIO 10
+/*Hacer un programa que calcule el total a pagar por la compra de camisas. Si
+se compran tres camisas o mas se aplica un descuento del 20% sobre el total
+de la compra y si son menos de tres camisas un descuento del 10%.*/
+/*let cantidad = parseInt(prompt("ingrese la cantidad de camisas que desea comprar"));
+let precio = parseInt(prompt("ingrese el precio de cada camisa"));
+let total = cantidad * precio;
+let descuento;
+if (cantidad >= 3) {
+    descuento = total * 0.20; // 20% de descuento
+} else {
+    descuento = total * 0.10; // 10% de descuento
+}
+
+let totalPagar = total - descuento;
+
+console.log("El total a pagar por las camisas es: $" + totalPagar);*/
+
+//EJERCICIO 12 
+/*Realizar una calculadora con las operaciones básicas suma, división,
+multiplicación y división.*/
+/*let num1 = parseFloat(prompt("Ingrese el primer número"));
+let num2 = parseFloat(prompt("Ingrese el segundo número"));
+let operacion = prompt("Ingrese la operación a realizar (+, -, *, /)");
+
+let resultado;
+
+if (operacion === "+") {
+    resultado = num1 + num2;
+} else if (operacion === "-") {
+    resultado = num1 - num2;
+} else if (operacion === "*") {
+    resultado = num1 * num2;
+} else if (operacion === "/") {
+    if (num2 !== 0) { // Evitar división por cero
+        resultado = num1 / num2;
+    } else {
+        resultado = "Error: No se puede dividir por cero.";
+    }
+} else {
+    resultado = "Operación no válida.";
+}
+
+console.log("El resultado es: " + resultado);*/
+
+//EJERCICIO 14 
+/*Crea un programa que calcule el índice de masa corporal (IMC) de una
+persona y muestre un mensaje indicando si la persona está bajo peso, peso
+normal, sobrepeso u obesidad.*/
+/*let peso = parseFloat(prompt("Ingrese su peso en kg:"));
+let altura = parseFloat(prompt("Ingrese su altura en metros:"));
+
+if (peso > 0 && altura > 0) { // Verifica que los valores sean válidos
+    let imc = peso / (altura * altura); // Fórmula del IMC
+    let mensaje;
+
+    if (imc < 18.5) {
+        mensaje = "Bajo peso";
+    } else if (imc >= 18.5 && imc < 24.9) {
+        mensaje = "Peso normal";
+    } else if (imc >= 25 && imc < 29.9) {
+        mensaje = "Sobrepeso";
+    } else {
+        mensaje = "Obesidad";
+    }
+
+    console.log("Su IMC es: " + imc.toFixed(2) + ". Clasificación: " + mensaje);
+} else {
+    console.log("Error: Ingrese valores válidos para peso y altura.");
+}*/
+
+//EJERCICIO 16
+/*16.Desarrolla un programa que solicite la nota final de la materia de algoritmos
+y generar el criterio de la nota, de acuerdo a la siguiente tabla.*/
+/*let nota = parseFloat(prompt("Ingrese su nota final (1.0 - 5.0):"));
+let criterio;
+
+if (nota >= 4.5 && nota <= 5.0) {
+    criterio = "Desempeño Superior";
+} else if (nota >= 3.9 && nota < 4.5) {
+    criterio = "Desempeño Alto";
+} else if (nota >= 3.4 && nota < 3.9) {
+    criterio = "Desempeño Básico";
+} else if (nota >= 1.0 && nota < 3.4) {
+    criterio = "Desempeño Bajo";
+} else {
+    criterio = "Error: Nota fuera de rango. Ingrese un valor entre 1.0 y 5.0.";
+}
+
+console.log("Su nota es: " + nota.toFixed(2) + ". Criterio: " + criterio);*/
+
+//EJERCICIO 18
+/*18.Escribe un programa que imprima "Es un número menor que 10" si el número
+ingresado es menor que 10, "Es un número entre 10 y 20" si el número
+ingresado está entre 10 y 20, y "Es un número mayor que 20" si el número
+ingresado es mayor que 20.*/
+let numero = parseFloat(prompt("Ingrese un número:"));
+
+if (numero < 10) {
+    console.log("Es un número menor que 10");
+} else if (numero >= 10 && numero <= 20) {
+    console.log("Es un número entre 10 y 20");
+} else {
+    console.log("Es un número mayor que 20");
+}
+
+//EJERCICIO 20
+/*Escribe un programa que solicite al usuario su género y su edad. Si el usuario
+es de género masculino y tiene más de 18 años, muestra un mensaje que
+indique que es elegible para el servicio militar; en caso contrario, muestra un
+mensaje que diga que no es elegible.*/
+let genero = prompt("Ingrese su género (Masculino/Femenino):");
+let edad = parseInt(prompt("Ingrese su edad:"));
+
+if (genero === "masculino" && edad > 18) {
+    console.log("Eres elegible para el servicio militar.");
+} else {
+    console.log("No eres elegible para el servicio militar.");
 }
