@@ -491,7 +491,7 @@ console.log("Su nota es: " + nota.toFixed(2) + ". Criterio: " + criterio);*/
 ingresado es menor que 10, "Es un número entre 10 y 20" si el número
 ingresado está entre 10 y 20, y "Es un número mayor que 20" si el número
 ingresado es mayor que 20.*/
-let numero = parseFloat(prompt("Ingrese un número:"));
+/*let numero = parseFloat(prompt("Ingrese un número:"));
 
 if (numero < 10) {
     console.log("Es un número menor que 10");
@@ -499,18 +499,134 @@ if (numero < 10) {
     console.log("Es un número entre 10 y 20");
 } else {
     console.log("Es un número mayor que 20");
-}
+}*/
 
 //EJERCICIO 20
 /*Escribe un programa que solicite al usuario su género y su edad. Si el usuario
 es de género masculino y tiene más de 18 años, muestra un mensaje que
 indique que es elegible para el servicio militar; en caso contrario, muestra un
 mensaje que diga que no es elegible.*/
-let genero = prompt("Ingrese su género (Masculino/Femenino):");
+/*let genero = prompt("Ingrese su género (Masculino/Femenino):").toLowerCase();
 let edad = parseInt(prompt("Ingrese su edad:"));
 
 if (genero === "masculino" && edad > 18) {
     console.log("Eres elegible para el servicio militar.");
 } else {
     console.log("No eres elegible para el servicio militar.");
+}*/
+
+//EJERCICIO 3
+/* VERIFICA SI UNA PERSONA ES MAYOR DE EDAD  O NO (mayor o igual a 18 )e indica cuantos años le faltan*/
+/*let edad = parseInt(prompt("Ingrese su edad:"));
+
+if (edad >= 18) {
+    console.log("Eres mayor de edad.");
+} else {
+    let añosFaltantes = 18 - edad;
+    console.log("Eres menor de edad. Te faltan " + añosFaltantes + " años para ser mayor de edad.");
+}*/
+
+//EJERCICIO 4
+/*usa el operador ternario para asignar el valor "adulto" o "menor" a una variable dependiendo de la edad
+let edad = parseInt(prompt("Ingrese su edad:"));
+
+let categoria = (edad >= 18) ? "adulto" : "menor";
+
+console.log("Usted es: " + categoria);*/
+
+
+/*FUNCIONES
+function saludar() {
+    document.write("probando estas funciones")
 }
+saludar();
+*/
+//ejercicios
+/*
+function sumar(){
+    return 6 + 12;
+}
+//opcion 1
+alert (sumar());
+/*opcion 2
+const resultado = sumar();
+document.write(resultado); */
+
+/*
+function getRandomNumber() {
+    // recuperamos un número aleatorio entre 0 y 1
+    const random = Math.random() // por ejemplo: 0.6803487380457318
+  
+    // lo multiplicamos por 10 para que esté entre 0 y 10
+    const multiplied = random * 10 // -> 6.803487380457318
+  
+    // redondeamos hacia abajo para que esté entre 0 y 9
+    const rounded = Math.floor(multiplied) // -> 6
+  
+    // le sumamos uno para que esté entre 1 y 10
+    const result = rounded + 1 // -> 7
+  
+    // devolvemos el resultado
+    return result
+  }
+*/
+/*
+function saludar (nombre){
+    alert ("hola " + nombre);
+}
+saludar ("lorena")*/
+
+/*EVIDENCIA–JAVASCRIPT AVANZADA
+FUNCIONES:
+¿Que es una Función?: Una función es un conjunto de instrucciones que realiza una tarea o calcula un valor, pero para que un procedimiento califique como función,
+ debe tomar alguna entrada y devolver una salida donde hay alguna relación obvia entre la entrada y la salida. Para usar una función, debes 
+ definirla en algún lugar del ámbito desde el que deseas llamarla. 
+
+DEFINIR FUNCIONES:
+Declaración de función
+Una definición de función (también denominada declaración de función o expresión de función ) consta de la palabra clave "FUNCTION", seguida de:
+El nombre de la función.
+Una lista de parámetros de la función, entre paréntesis y separados por comas.
+Las declaraciones de JavaScript que definen la función, encerradas entre llaves, { ... }
+EJEMPLO:*/
+function sumar(a,b) {
+    return a + b;
+  }
+  console.log (sumar(4,3));
+
+  /*TIPOS DE FUNCIONES: 
+  FUNCIONES DECLARADAS:las funciones declarativas son aquella funciones donde utilizas la palabra reservada function al inicio de la línea
+  Se definen con la palabra clave function.
+Se pueden llamar antes de su declaración debido al levantamiento .
+Tienen un nombre y pueden ser reutilizados.
+  EJEMPLO:*/
+  function saludar() {
+    console.log("¡Hola!");
+}
+saludar(); // "¡Hola!"
+
+/*FUNCIONES EXPRESADAS: Las funciones de expresión son aquellas funciones que se guardan en una variable con las palabras reservadas var, const o let
+Se asignan a una variable.
+No se pueden llamar antes de su definición porque no tienen hoisting.
+Pueden ser anónimos o nombradas.
+EJEMPLO*/
+const numero = function() {
+    console.log("564");
+};
+numero(); 
+
+
+/*FUNCIONES FLECHA:Las Funciones Flecha o Arrow Functions son una nueva sintaxis para definir funciones anónimas en JavaScript de un modo más conciso.
+ Al ser una sintaxis abreviada, nos ahorrará bastante tiempo, además de simplificar el ámbito de la función. 
+ Sintaxis más corta ( =>).
+No tienen su propio this.
+Se usan comúnmente en callbacks y funciones de orden superior .
+EJEMPLO:*/
+const  nombre= () => {
+    console.log("andres");
+};
+nombre(); 
+
+/* */
+
+
